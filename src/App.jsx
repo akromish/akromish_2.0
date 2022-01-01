@@ -12,7 +12,7 @@ import Home from './pages/Home';
 // import About from './pages/About';
 import RamblingsAndSuch from './pages/RamblingsAndSuch';
 import CSProjects from './pages/CSProjects';
-import About from "./pages/About";
+import About from './pages/About';
 
 const App = function app() {
   const [darkSwitch, setDarkSwitch] = useState(false);
@@ -46,7 +46,7 @@ const App = function app() {
             }}
           />
           <Routes>
-            <Route path="/about" element={<About/>} />
+            <Route path="/about" element={<About />} />
             <Route path="/ramblings-and-such" element={<RamblingsAndSuch />} />
             <Route path="/cs-projects" elemen={<CSProjects />} />
             <Route path="/" element={<Home />} />
