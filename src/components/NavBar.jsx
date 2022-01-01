@@ -2,7 +2,6 @@ import { AppBar, Toolbar } from '@mui/material';
 import { Link } from 'react-router-dom';
 import React from 'react';
 
-// eslint-disable-next-line react/function-component-definition
 export default function NavBar() {
   return (
     <AppBar>
@@ -13,5 +12,13 @@ export default function NavBar() {
         <Link to="/cs-projects">CS Projects</Link>
       </Toolbar>
     </AppBar>
+
+  // <Drawer
+  //     anchor='left'
+  //     open=false
+  //     onClose={toggleDrawer(anchor, false)}
+  // >
+  //     {list(anchor)}
+  // </Drawer>
   );
 }
