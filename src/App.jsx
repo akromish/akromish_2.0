@@ -9,7 +9,6 @@ import {
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
-// import About from './pages/About';
 import RamblingsAndSuch from './pages/RamblingsAndSuch';
 import CSProjects from './pages/CSProjects';
 import About from './pages/About';
@@ -33,6 +32,7 @@ const App = function app() {
     shadows: Array(25).fill('none'),
   });
   const Offset = styled('div')(() => theme.mixins.toolbar);
+
   return (
     <ThemeProvider theme={theme}>
       <Paper style={{ height: '100vh' }}>
