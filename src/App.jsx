@@ -48,7 +48,7 @@ const App = function app() {
           <Routes>
             <Route path="/about" element={<About />} />
             <Route path="/ramblings-and-such" element={<RamblingsAndSuch />} />
-            <Route path="/cs-projects" elemen={<CSProjects />} />
+            <Route path="/cs-projects" element={<CSProjects />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </Router>

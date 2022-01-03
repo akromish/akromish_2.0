@@ -1,7 +1,8 @@
 import {
-  Button, Drawer, Link, List, ListItem,
+  Button, Drawer, List, ListItem,
 } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
   const [drawerState, setDrawerState] = React.useState(false);
@@ -19,19 +20,17 @@ export default function NavBar() {
       onClick={toggleDrawer(false)}
     >
       <List>
-        <ListItem
-          button
-          component={Link}
-          to="/"
-        >
-          Home
+        <ListItem>
+          <Button component={Link} to="/">Home</Button>
         </ListItem>
-        <ListItem
-          button
-          component={Link}
-          to="/about"
-        >
-          About
+        <ListItem>
+          <Button component={Link} to="/about">About</Button>
+        </ListItem>
+        <ListItem>
+          <Button component={Link} to="/cs-projects">CS Projects</Button>
+        </ListItem>
+        <ListItem>
+          <Button component={Link} to="/ramblings-and-such">Ramblings & Such</Button>
         </ListItem>
       </List>
     </div>

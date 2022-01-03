@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function CSProjects() {
-  return <h1>Akromish 2.0</h1>;
+  return <h1>CS Projects</h1>;
 }
