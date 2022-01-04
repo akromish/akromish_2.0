@@ -3,7 +3,6 @@ import {
   Paper,
   ThemeProvider,
   createTheme,
-  styled,
   Switch as Toggle,
 } from '@mui/material';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -31,26 +30,31 @@ const App = function app() {
     },
     shadows: Array(25).fill('none'),
   });
-  const Offset = styled('div')(() => theme.mixins.toolbar);
 
   return (
     <ThemeProvider theme={theme}>
       <Paper style={{ height: '100vh' }}>
         <Router>
           <NavBar />
-          <Offset />
-          <Toggle
-            size="medium"
-            onChange={() => {
-              setDarkSwitch(!darkSwitch);
-            }}
-          />
-          <Routes>
-            <Route path="/about" element={<About />} />
-            <Route path="/ramblings-and-such" element={<RamblingsAndSuch />} />
-            <Route path="/cs-projects" element={<CSProjects />} />
-            <Route path="/" element={<Home />} />
-          </Routes>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+          >
+            <Routes>
+              <Route path="/about" element={<About />} />
+              <Route path="/ramblings-and-such" element={<RamblingsAndSuch />} />
+              <Route path="/cs-projects" element={<CSProjects />} />
+              <Route path="/" element={<Home />} />
+            </Routes>
+            <Toggle
+              size="medium"
+              onChange={() => {
+                setDarkSwitch(!darkSwitch);
+              }}
+            />
+          </div>
         </Router>
       </Paper>
     </ThemeProvider>
