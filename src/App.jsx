@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import RamblingsAndSuch from './pages/RamblingsAndSuch';
 import CSProjects from './pages/CSProjects';
 import About from './pages/About';
+// TODO: fonts lol
 
 const App = function app() {
   const [darkSwitch, setDarkSwitch] = useState(false);
@@ -26,7 +27,7 @@ const App = function app() {
   });
 
   return (
-    // TODO: figure out how to apply theme to main div
+    // TODO: figure out why above and below main component there is white/blackspace
     <ThemeProvider theme={theme}>
       <Paper style={{
         height: '100vh',
