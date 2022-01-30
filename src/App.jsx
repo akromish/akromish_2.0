@@ -43,8 +43,8 @@ const App = function app() {
             alignItems: 'center',
             justifyContent: 'center',
             // TODO: figure out how to make this only apply to desktop view
-            marginLeft: '20vw',
-            marginRight: '20vw',
+            marginLeft: '22vw',
+            marginRight: '22vw',
           }}
           >
             <Routes>
