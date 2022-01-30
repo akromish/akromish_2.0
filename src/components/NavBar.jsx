@@ -1,5 +1,5 @@
 import {
-  Button,
+  Box,
   Drawer, IconButton, List, ListItem, ListItemButton, Stack, Switch,
 } from '@mui/material';
 import React from 'react';
@@ -10,7 +10,6 @@ import HomeSharpIcon from '@mui/icons-material/HomeSharp';
 import InfoIconSharp from '@mui/icons-material/InfoSharp';
 import TerminalSharpIcon from '@mui/icons-material/TerminalSharp';
 import CreateSharpIcon from '@mui/icons-material/CreateSharp';
-import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 
 function NavBar({
   darkSwitchToggle,
@@ -32,12 +31,6 @@ function NavBar({
       }}
     >
       <List>
-        {/* TODO: make this menu close look better */}
-        <Stack alignItems="right">
-          <Button onClick={toggleDrawer(false)}>
-            <CloseSharpIcon />
-          </Button>
-        </Stack>
         <ListItem>
           <ListItemButton component={Link} to="/" onClick={toggleDrawer(false)}>
             <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
@@ -99,29 +92,41 @@ function NavBar({
   );
 
   return (
-  // TODO: figure out how to make this only apply to desktop view
-  // 20vw - enough to cover navbar icon
-    <div style={{ marginLeft: 'calc(20vw - 2.75vw)' }}>
+    <Box justifyContent="center">
       <IconButton
+        sx={{
+          marginLeft: 'auto',
+        }}
         onClick={toggleDrawer(true)}
         color="primary"
       >
         <MenuIcon
           sx={{
-            fontSize: '2vw',
+            fontSize: { xs: '8vw', lg: '2vw' },
           }}
         />
       </IconButton>
 
       <Drawer
+        variant="permanent"
         anchor="left"
         open={drawerState}
         onClose={toggleDrawer(false)}
+        sx={{ display: { xs: 'none', lg: 'block' } }}
+      >
+        {list()}
+      </Drawer>
+      <Drawer
+        variant="temporary"
+        anchor="top"
+        open={drawerState}
+        onClose={toggleDrawer(false)}
+        sx={{ display: { xs: 'block', lg: 'none' } }}
       >
         {list()}
       </Drawer>
 
-    </div>
+    </Box>
   );
 }
 

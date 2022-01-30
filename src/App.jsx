@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   ThemeProvider,
-  createTheme,
+  createTheme, Box,
 } from '@mui/material';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -38,14 +38,15 @@ const App = function app() {
             darkSwitchToggle={darkSwitchToggle}
             darkSwitch={darkSwitch}
           />
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            // TODO: figure out how to make this only apply to desktop view
-            marginLeft: '22vw',
-            marginRight: '22vw',
-          }}
+          <Box
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+            marginLeft={{ xs: '10vw', lg: '22vw' }}
+            marginRight={{ xs: '10vw', lg: '22vw' }}
+
           >
             <Routes>
               <Route path="/about" element={<About />} />
@@ -53,7 +54,7 @@ const App = function app() {
               <Route path="/cs-projects" element={<CSProjects />} />
               <Route path="/" element={<Home />} />
             </Routes>
-          </div>
+          </Box>
         </BrowserRouter>
       </div>
     </ThemeProvider>

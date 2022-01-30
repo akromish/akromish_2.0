@@ -1,16 +1,18 @@
 import React from 'react';
-import { Avatar, Link, Stack } from '@mui/material';
+import {
+  Avatar, Box, Link, Stack,
+} from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function Home() {
   return (
     <Stack alignItems="center" spacing={2}>
-      <div style={{ fontSize: '3vw' }}>Akram Weheba</div>
+      <Box fontSize={{ xs: '12vw', lg: '4vw' }}>Akram Weheba</Box>
       <Avatar
         alt="akram"
         src="/akram-main.jpeg"
-        sx={{ width: '20vw', height: '20vw' }}
+        sx={{ width: { xs: '50vw', lg: '20vw' }, height: { xs: '50vw', lg: '20vw' } }}
       />
       <div style={{ fontSize: '1vw' }}>(software engineer??)</div>
       <Stack direction="row" spacing={2}>
