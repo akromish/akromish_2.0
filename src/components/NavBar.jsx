@@ -40,10 +40,10 @@ function NavBar({
         </Stack>
         <ListItem>
           <ListItemButton component={Link} to="/" onClick={toggleDrawer(false)}>
-            <Stack direction="row" spacing={2} alignItems="center" fontSize="32px">
+            <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
               <HomeSharpIcon
                 sx={{
-                  fontSize: '32px',
+                  fontSize: '1.75vw',
                 }}
               />
               <div> Home </div>
@@ -52,10 +52,10 @@ function NavBar({
         </ListItem>
         <ListItem>
           <ListItemButton component={Link} to="/about" onClick={toggleDrawer(false)}>
-            <Stack direction="row" spacing={2} alignItems="center" fontSize="32px">
+            <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
               <InfoIconSharp
                 sx={{
-                  fontSize: '32px',
+                  fontSize: '1.75vw',
                 }}
               />
               <div> About </div>
@@ -64,10 +64,10 @@ function NavBar({
         </ListItem>
         <ListItem>
           <ListItemButton component={Link} to="/cs-projects" onClick={toggleDrawer(false)}>
-            <Stack direction="row" spacing={2} alignItems="center" fontSize="32px">
+            <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
               <TerminalSharpIcon
                 sx={{
-                  fontSize: '32px',
+                  fontSize: '1.75vw',
                 }}
               />
               <div> CS Projects </div>
@@ -76,10 +76,10 @@ function NavBar({
         </ListItem>
         <ListItem>
           <ListItemButton component={Link} to="/ramblings-and-such" onClick={toggleDrawer(false)}>
-            <Stack direction="row" spacing={2} alignItems="center" fontSize="32px">
+            <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
               <CreateSharpIcon
                 sx={{
-                  fontSize: '32px',
+                  fontSize: '1.75vw',
                 }}
               />
               <div> Ramblings and Such </div>
