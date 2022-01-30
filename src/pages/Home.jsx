@@ -6,7 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 export default function Home() {
   return (
     <Stack alignItems="center" spacing={2}>
-      <div style={{ fontSize: '3vw' }}>Home</div>
+      <div style={{ fontSize: '3vw' }}>Akram Weheba</div>
       <Avatar
         alt="akram"
         src="/akram-main.jpeg"
