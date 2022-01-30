@@ -1,11 +1,14 @@
 import {
-  Drawer, IconButton, List, ListItem,
+  Drawer, IconButton, List, ListItem, Switch as Toggle,
 } from '@mui/material';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import SortIcon from '@material-ui/icons/Sort';
+import MenuIcon from '@mui/icons-material/Menu';
 
-export default function NavBar() {
+function NavBar({
+  darkSwitchToggle,
+}) {
   const [drawerState, setDrawerState] = React.useState(false);
   const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -24,16 +27,21 @@ export default function NavBar() {
         <ListItem button component={Link} to="/about">About</ListItem>
         <ListItem button component={Link} to="/cs-projects">CS Projects</ListItem>
         <ListItem button component={Link} to="/ramblings-and-such">Ramblings & Such</ListItem>
+        <Toggle
+          size="medium"
+          onChange={darkSwitchToggle}
+        />
       </List>
     </div>
   );
 
   return (
-    <div>
+  // figure out how to make this only apply to desktop view
+    <div style={{ marginLeft: '20vw' }}>
       <IconButton
         onClick={toggleDrawer(true)}
       >
-        <SortIcon />
+        <MenuIcon />
       </IconButton>
 
       <Drawer
@@ -43,6 +51,13 @@ export default function NavBar() {
       >
         {list()}
       </Drawer>
+
     </div>
   );
 }
+
+NavBar.propTypes = {
+  darkSwitchToggle: PropTypes.func.isRequired,
+};
+
+export default NavBar;
