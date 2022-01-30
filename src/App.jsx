@@ -32,31 +32,23 @@ const App = function app() {
     // TODO: figure out why above and below main component there is white/blackspace
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div>
-        <BrowserRouter>
-          <NavBar
-            darkSwitchToggle={darkSwitchToggle}
-            darkSwitch={darkSwitch}
-          />
-          <Box
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-            marginLeft={{ xs: '10vw', lg: '22vw' }}
-            marginRight={{ xs: '10vw', lg: '22vw' }}
-
-          >
-            <Routes>
-              <Route path="/about" element={<About />} />
-              <Route path="/ramblings-and-such" element={<RamblingsAndSuch />} />
-              <Route path="/cs-projects" element={<CSProjects />} />
-              <Route path="/" element={<Home />} />
-            </Routes>
-          </Box>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <NavBar
+          darkSwitchToggle={darkSwitchToggle}
+          darkSwitch={darkSwitch}
+        />
+        <Box
+          marginLeft={{ xs: '10vw', lg: '22vw' }}
+          marginRight={{ xs: '10vw', lg: '22vw' }}
+        >
+          <Routes>
+            <Route path="/about" element={<About />} />
+            <Route path="/ramblings-and-such" element={<RamblingsAndSuch />} />
+            <Route path="/cs-projects" element={<CSProjects />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </Box>
+      </BrowserRouter>
     </ThemeProvider>
   );
 };

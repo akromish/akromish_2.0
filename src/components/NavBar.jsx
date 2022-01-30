@@ -150,7 +150,6 @@ function NavBar({
           }}
         />
       </IconButton>
-
       <Drawer
         variant="permanent"
         anchor="left"
@@ -169,7 +168,6 @@ function NavBar({
       >
         {list()}
       </Drawer>
-
     </Box>
   );
 }

@@ -14,20 +14,20 @@ export default function Home() {
         src="/akram-main.jpeg"
         sx={{ width: { xs: '60vw', lg: '20vw' }, height: { xs: '60vw', lg: '20vw' } }}
       />
-      <div style={{ fontSize: '1vw' }}>(software engineer??)</div>
+      <Box fontSize={{ xs: '5vw', lg: '1vw' }}>(software engineer??)</Box>
       <Stack direction="row" spacing={2}>
         {/* TODO: make links open new tabs */}
         <Link href="https://github.com/akromish">
           <GitHubIcon
             sx={{
-              fontSize: { xs: '12vw', lg: '1.75vw' },
+              fontSize: { xs: '12vw', lg: '2vw' },
             }}
           />
         </Link>
         <Link href="https://github.com/akromish">
           <LinkedInIcon
             sx={{
-              fontSize: { xs: '12vw', lg: '1.75vw' },
+              fontSize: { xs: '12vw', lg: '2vw' },
             }}
           />
         </Link>
