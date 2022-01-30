@@ -6,7 +6,7 @@ export default function About() {
     <Stack alignItems="center">
       <div style={{ fontSize: '3vw' }}>About</div>
       <p>
-        Hey there fellow human!
+        👋 Hey there fellow human!
         <br />
         <br />
         Thanks for checking out my website. It&#39;s not a masterpiece but it&#39;s my piece.
