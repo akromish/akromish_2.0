@@ -3,7 +3,7 @@ import { Stack } from '@mui/material';
 
 export default function RamblingsAndSuch() {
   return (
-    <Stack spacing={4}>
+    <Stack alignItems="center" spacing={4}>
       <div style={{ fontSize: '3vw' }}>Ramblings and Such</div>
       <Stack spacing={2}>
         <Stack spacing={1}>

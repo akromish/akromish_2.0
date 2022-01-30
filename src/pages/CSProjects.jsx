@@ -3,7 +3,7 @@ import { Link, Stack } from '@mui/material';
 
 export default function CSProjects() {
   return (
-    <Stack spacing={4}>
+    <Stack alignItems="center" spacing={4}>
       <div style={{ fontSize: '3vw' }}>CS Projects</div>
       <Stack spacing={2}>
         <Stack spacing={1}>

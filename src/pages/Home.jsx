@@ -10,7 +10,7 @@ export default function Home() {
       <Avatar
         alt="akram"
         src="/akram-main.jpeg"
-        sx={{ width: 250, height: 250 }}
+        sx={{ width: '20vw', height: '20vw' }}
       />
       <div style={{ fontSize: '1vw' }}>(software engineer??)</div>
       <Stack direction="row" spacing={2}>

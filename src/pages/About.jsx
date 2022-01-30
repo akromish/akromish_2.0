@@ -3,7 +3,7 @@ import { Stack } from '@mui/material';
 
 export default function About() {
   return (
-    <Stack>
+    <Stack alignItems="center">
       <div style={{ fontSize: '3vw' }}>About</div>
       <p>
         Hey there fellow human!
