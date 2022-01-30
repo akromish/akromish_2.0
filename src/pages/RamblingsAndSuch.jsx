@@ -7,10 +7,10 @@ export default function RamblingsAndSuch() {
       <Box fontSize={{ xs: '12vw', lg: '4vw' }}>Ramblings and Such</Box>
       <Stack spacing={2}>
         <Stack spacing={1}>
-          <div style={{ fontSize: '2vw' }}>
+          <Box fontSize={{ xs: '8vw', lg: '2vw' }}>
             Ramble 1.0
-          </div>
-          <p style={{ fontSize: '1.25vw' }}>
+          </Box>
+          <Box fontSize={{ xs: '5vw', lg: '1.25vw' }}>
             Once upon a time, there was a member of the bourgeoisie.
             It was a young man. A mysterious one to be sure...
             <br />
@@ -29,7 +29,7 @@ export default function RamblingsAndSuch() {
             invited. It was the real deal, as is commonly said. Seemingly,
             any time there is joy to be had, Bob gravitates towards preventing
             it. This festival was no different. Bam! The...
-          </p>
+          </Box>
         </Stack>
       </Stack>
       <div />
