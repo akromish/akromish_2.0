@@ -24,11 +24,11 @@ function NavBar({
   };
 
   const list = () => (
-    <div
+    <Box
       role="presentation"
-      style={{
-        width: '20vw',
-      }}
+      width={{ xs: '100vw', lg: '20vw' }}
+      justifyContent="center"
+      alignItems="center"
     >
       <List>
         <ListItem>
@@ -36,10 +36,10 @@ function NavBar({
             <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
               <HomeSharpIcon
                 sx={{
-                  fontSize: '1.75vw',
+                  fontSize: { xs: '12vw', lg: '1.75vw' },
                 }}
               />
-              <div> Home </div>
+              <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> Home </Box>
             </Stack>
           </ListItemButton>
         </ListItem>
@@ -48,10 +48,10 @@ function NavBar({
             <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
               <InfoIconSharp
                 sx={{
-                  fontSize: '1.75vw',
+                  fontSize: { xs: '12vw', lg: '1.75vw' },
                 }}
               />
-              <div> About </div>
+              <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> About </Box>
             </Stack>
           </ListItemButton>
         </ListItem>
@@ -60,10 +60,10 @@ function NavBar({
             <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
               <TerminalSharpIcon
                 sx={{
-                  fontSize: '1.75vw',
+                  fontSize: { xs: '12vw', lg: '1.75vw' },
                 }}
               />
-              <div> CS Projects </div>
+              <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> CS Projects </Box>
             </Stack>
           </ListItemButton>
         </ListItem>
@@ -72,10 +72,10 @@ function NavBar({
             <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
               <CreateSharpIcon
                 sx={{
-                  fontSize: '1.75vw',
+                  fontSize: { xs: '12vw', lg: '1.75vw' },
                 }}
               />
-              <div> Ramblings and Such </div>
+              <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> Ramblings and Such </Box>
             </Stack>
           </ListItemButton>
         </ListItem>
@@ -88,21 +88,21 @@ function NavBar({
           />
         </ListItem>
       </List>
-    </div>
+    </Box>
   );
 
   return (
     <Box justifyContent="center">
+      {/* TODO: figure out how to move button to right side of screen */}
       <IconButton
-        sx={{
-          marginLeft: 'auto',
-        }}
         onClick={toggleDrawer(true)}
         color="primary"
       >
         <MenuIcon
           sx={{
-            fontSize: { xs: '8vw', lg: '2vw' },
+            fontSize: { xs: '12vw' },
+            display: { xs: 'block', lg: 'none' },
+
           }}
         />
       </IconButton>
