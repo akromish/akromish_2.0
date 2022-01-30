@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import {
   ThemeProvider,
   createTheme,
-  Paper,
 } from '@mui/material';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import CssBaseline from '@mui/material/CssBaseline';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import RamblingsAndSuch from './pages/RamblingsAndSuch';
 import CSProjects from './pages/CSProjects';
 import About from './pages/About';
-// TODO: fonts lol
 
 const App = function app() {
   const [darkSwitch, setDarkSwitch] = useState(false);
@@ -21,22 +20,23 @@ const App = function app() {
     palette: {
       mode: darkSwitch ? 'dark' : 'light',
       primary: {
-        main: '#E040FB',
+        main: '#ce8bf0',
       },
+    },
+    typography: {
+      // fontFamily: 'Ubuntu', // TODO: figure out how to do fonts lol
     },
   });
 
   return (
     // TODO: figure out why above and below main component there is white/blackspace
     <ThemeProvider theme={theme}>
-      <Paper style={{
-        height: '100vh',
-        borderRadius: 0,
-      }}
-      >
+      <CssBaseline />
+      <div>
         <BrowserRouter>
           <NavBar
             darkSwitchToggle={darkSwitchToggle}
+            darkSwitch={darkSwitch}
           />
           <div style={{
             display: 'flex',
@@ -55,7 +55,7 @@ const App = function app() {
             </Routes>
           </div>
         </BrowserRouter>
-      </Paper>
+      </div>
     </ThemeProvider>
   );
 };

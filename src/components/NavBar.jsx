@@ -1,5 +1,5 @@
 import {
-  // Button,
+  Button,
   Drawer, IconButton, List, ListItem, ListItemButton, Stack, Switch,
 } from '@mui/material';
 import React from 'react';
@@ -10,10 +10,11 @@ import HomeSharpIcon from '@mui/icons-material/HomeSharp';
 import InfoIconSharp from '@mui/icons-material/InfoSharp';
 import TerminalSharpIcon from '@mui/icons-material/TerminalSharp';
 import CreateSharpIcon from '@mui/icons-material/CreateSharp';
-// import CloseSharpIcon from '@mui/icons-material/CloseSharp';
+import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 
 function NavBar({
   darkSwitchToggle,
+  darkSwitch,
 }) {
   const [drawerState, setDrawerState] = React.useState(false);
   const toggleDrawer = (open) => (event) => {
@@ -26,19 +27,19 @@ function NavBar({
   const list = () => (
     <div
       role="presentation"
-      onClick={toggleDrawer(false)}
       style={{
         width: '20vw',
       }}
     >
       <List>
-        {/* <Stack alignItems="right"> */}
-        {/*  <Button> */}
-        {/*    <CloseSharpIcon /> */}
-        {/*  </Button> */}
-        {/* </Stack> */}
+        {/* TODO: make this menu close look better */}
+        <Stack alignItems="right">
+          <Button onClick={toggleDrawer(false)}>
+            <CloseSharpIcon />
+          </Button>
+        </Stack>
         <ListItem>
-          <ListItemButton component={Link} to="/">
+          <ListItemButton component={Link} to="/" onClick={toggleDrawer(false)}>
             <Stack direction="row" spacing={2} alignItems="center" fontSize="32px">
               <HomeSharpIcon
                 sx={{
@@ -50,7 +51,7 @@ function NavBar({
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton component={Link} to="/about">
+          <ListItemButton component={Link} to="/about" onClick={toggleDrawer(false)}>
             <Stack direction="row" spacing={2} alignItems="center" fontSize="32px">
               <InfoIconSharp
                 sx={{
@@ -62,7 +63,7 @@ function NavBar({
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton component={Link} to="/cs-projects">
+          <ListItemButton component={Link} to="/cs-projects" onClick={toggleDrawer(false)}>
             <Stack direction="row" spacing={2} alignItems="center" fontSize="32px">
               <TerminalSharpIcon
                 sx={{
@@ -74,7 +75,7 @@ function NavBar({
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton component={Link} to="/ramblings-and-such">
+          <ListItemButton component={Link} to="/ramblings-and-such" onClick={toggleDrawer(false)}>
             <Stack direction="row" spacing={2} alignItems="center" fontSize="32px">
               <CreateSharpIcon
                 sx={{
@@ -86,9 +87,11 @@ function NavBar({
           </ListItemButton>
         </ListItem>
         <ListItem>
+          {/* TODO: make this dark toggle look nicer */}
           <Switch
             size="medium"
             onChange={darkSwitchToggle}
+            checked={darkSwitch}
           />
         </ListItem>
       </List>
@@ -96,11 +99,12 @@ function NavBar({
   );
 
   return (
-  // figure out how to make this only apply to desktop view
+  // TODO: figure out how to make this only apply to desktop view
   // 20vw - enough to cover navbar icon
     <div style={{ marginLeft: 'calc(20vw - 2.75vw)' }}>
       <IconButton
         onClick={toggleDrawer(true)}
+        color="primary"
       >
         <MenuIcon
           sx={{
@@ -123,6 +127,7 @@ function NavBar({
 
 NavBar.propTypes = {
   darkSwitchToggle: PropTypes.func.isRequired,
+  darkSwitch: PropTypes.bool.isRequired,
 };
 
 export default NavBar;
