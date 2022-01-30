@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   ThemeProvider,
   createTheme,
+  Paper,
 } from '@mui/material';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
@@ -27,27 +28,33 @@ const App = function app() {
   return (
     // TODO: figure out how to apply theme to main div
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <NavBar
-          darkSwitchToggle={darkSwitchToggle}
-        />
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          // TODO: figure out how to make this only apply to desktop view
-          marginLeft: '20vw',
-          marginRight: '20vw',
-        }}
-        >
-          <Routes>
-            <Route path="/about" element={<About />} />
-            <Route path="/ramblings-and-such" element={<RamblingsAndSuch />} />
-            <Route path="/cs-projects" element={<CSProjects />} />
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
+      <Paper style={{
+        height: '100vh',
+        borderRadius: 0,
+      }}
+      >
+        <BrowserRouter>
+          <NavBar
+            darkSwitchToggle={darkSwitchToggle}
+          />
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            // TODO: figure out how to make this only apply to desktop view
+            marginLeft: '20vw',
+            marginRight: '20vw',
+          }}
+          >
+            <Routes>
+              <Route path="/about" element={<About />} />
+              <Route path="/ramblings-and-such" element={<RamblingsAndSuch />} />
+              <Route path="/cs-projects" element={<CSProjects />} />
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </Paper>
     </ThemeProvider>
   );
 };
