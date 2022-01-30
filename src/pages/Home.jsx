@@ -12,16 +12,24 @@ export default function Home() {
       <Avatar
         alt="akram"
         src="/akram-main.jpeg"
-        sx={{ width: { xs: '50vw', lg: '20vw' }, height: { xs: '50vw', lg: '20vw' } }}
+        sx={{ width: { xs: '60vw', lg: '20vw' }, height: { xs: '60vw', lg: '20vw' } }}
       />
       <div style={{ fontSize: '1vw' }}>(software engineer??)</div>
       <Stack direction="row" spacing={2}>
         {/* TODO: make links open new tabs */}
         <Link href="https://github.com/akromish">
-          <GitHubIcon />
+          <GitHubIcon
+            sx={{
+              fontSize: { xs: '12vw', lg: '1.75vw' },
+            }}
+          />
         </Link>
         <Link href="https://github.com/akromish">
-          <LinkedInIcon />
+          <LinkedInIcon
+            sx={{
+              fontSize: { xs: '12vw', lg: '1.75vw' },
+            }}
+          />
         </Link>
       </Stack>
     </Stack>
