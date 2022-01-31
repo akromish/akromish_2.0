@@ -18,18 +18,10 @@ export default function Home() {
       <Stack direction="row" spacing={2}>
         {/* TODO: make links open new tabs */}
         <Link href="https://github.com/akromish">
-          <GitHubIcon
-            sx={{
-              fontSize: { xs: '12vw', lg: '2vw' },
-            }}
-          />
+          <GitHubIcon sx={{ fontSize: { xs: '12vw', lg: '2vw' } }} />
         </Link>
         <Link href="https://github.com/akromish">
-          <LinkedInIcon
-            sx={{
-              fontSize: { xs: '12vw', lg: '2vw' },
-            }}
-          />
+          <LinkedInIcon sx={{ fontSize: { xs: '12vw', lg: '2vw' } }} />
         </Link>
       </Stack>
     </Stack>

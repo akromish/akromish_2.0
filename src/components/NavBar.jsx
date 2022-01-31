@@ -83,25 +83,14 @@ function NavBar({
     >
       <Stack>
         <Box paddingTop="3vw" />
-        <ListItem
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
+        <ListItem sx={{ display: 'flex', justifyContent: 'center' }}>
           <MaterialUISwitch onChange={darkSwitchToggle} checked={darkSwitch} />
         </ListItem>
-        <Stack
-          direction={{ xs: 'column-reverse', lg: 'column' }}
-        >
+        <Stack direction={{ xs: 'column-reverse', lg: 'column' }}>
           <ListItem>
             <ListItemButton component={Link} to="/" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <HomeSharpIcon
-                  sx={{
-                    fontSize: { xs: '12vw', lg: '1.75vw' },
-                  }}
-                />
+                <HomeSharpIcon sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
                 <Box fontSize={{ xs: '12vw', lg: '1.75vw' }} textAlign="center"> Home </Box>
               </Stack>
             </ListItemButton>
@@ -109,11 +98,7 @@ function NavBar({
           <ListItem>
             <ListItemButton component={Link} to="/about" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <InfoIconSharp
-                  sx={{
-                    fontSize: { xs: '12vw', lg: '1.75vw' },
-                  }}
-                />
+                <InfoIconSharp sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
                 <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> About </Box>
               </Stack>
             </ListItemButton>
@@ -121,11 +106,7 @@ function NavBar({
           <ListItem>
             <ListItemButton component={Link} to="/cs-projects" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <TerminalSharpIcon
-                  sx={{
-                    fontSize: { xs: '12vw', lg: '1.75vw' },
-                  }}
-                />
+                <TerminalSharpIcon sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
                 <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> CS Projects </Box>
               </Stack>
             </ListItemButton>
@@ -133,33 +114,15 @@ function NavBar({
           <ListItem>
             <ListItemButton component={Link} to="/ramblings-and-such" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <CreateSharpIcon
-                  sx={{
-                    fontSize: { xs: '12vw', lg: '1.75vw' },
-                  }}
-                />
+                <CreateSharpIcon sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
                 <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> Ramblings and Such </Box>
               </Stack>
             </ListItemButton>
           </ListItem>
         </Stack>
-        <ListItem
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
-          <IconButton
-            onClick={toggleDrawer(false)}
-            color="error"
-          >
-            <CloseIcon
-              sx={{
-                fontSize: { xs: '12vw' },
-                display: { xs: 'block', lg: 'none' },
-
-              }}
-            />
+        <ListItem sx={{ display: 'flex', justifyContent: 'center' }}>
+          <IconButton onClick={toggleDrawer(false)} color="error">
+            <CloseIcon sx={{ fontSize: { xs: '12vw' }, display: { xs: 'block', lg: 'none' } }} />
           </IconButton>
         </ListItem>
       </Stack>
@@ -172,16 +135,8 @@ function NavBar({
       sx={{ top: 'auto', bottom: 0 }}
       color="primary"
     >
-      <IconButton
-        onClick={toggleDrawer(true)}
-      >
-        <MenuIcon
-          sx={{
-            fontSize: { xs: '12vw' },
-            display: { xs: 'block', lg: 'none' },
-
-          }}
-        />
+      <IconButton onClick={toggleDrawer(true)}>
+        <MenuIcon sx={{ fontSize: { xs: '12vw' }, display: { xs: 'block', lg: 'none' } }} />
       </IconButton>
       <Drawer
         variant="permanent"
@@ -192,7 +147,6 @@ function NavBar({
       >
         {list()}
       </Drawer>
-      {/* TODO: reverse sort list for mobile drawer */}
       <Drawer
         variant="temporary"
         anchor="bottom"

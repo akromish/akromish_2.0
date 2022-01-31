@@ -29,7 +29,6 @@ const App = function app() {
   });
 
   return (
-    // TODO: figure out why above and below main component there is white/blackspace
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter>

@@ -31,7 +31,6 @@ export default function RamblingsAndSuch() {
           </Typography>
         </Stack>
       </Stack>
-      <div />
     </Stack>
   );
 }

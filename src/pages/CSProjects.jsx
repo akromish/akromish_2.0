@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Box, Link, Stack,
+  Box, Link, Stack, Typography,
 } from '@mui/material';
 
 export default function CSProjects() {
@@ -12,7 +12,7 @@ export default function CSProjects() {
           <Link href="https://github.com/akromish/pdg-auction" underline="hover" fontSize={{ xs: '8vw', lg: '2vw' }}>
             PD Silent Auction
           </Link>
-          <Box fontSize={{ xs: '5vw', lg: '1.25vw' }}>
+          <Typography fontSize={{ xs: '5vw', lg: '1.25vw' }}>
             Whamo! That&apos;s a pretty catchy first word if you ask me. How does it relate to
             this project you ask? Hmmmm...it doesn&apos;t!
             <br />
@@ -43,7 +43,7 @@ export default function CSProjects() {
             <br />
             <br />
             Also, this website should be live at pdsilent.org
-          </Box>
+          </Typography>
         </Stack>
       </Stack>
       <div />
