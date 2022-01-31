@@ -1,4 +1,5 @@
 import {
+  AppBar,
   Box,
   Drawer, IconButton, List, ListItem, ListItemButton, Stack, Switch,
 } from '@mui/material';
@@ -11,6 +12,7 @@ import HomeSharpIcon from '@mui/icons-material/HomeSharp';
 import InfoIconSharp from '@mui/icons-material/InfoSharp';
 import TerminalSharpIcon from '@mui/icons-material/TerminalSharp';
 import CreateSharpIcon from '@mui/icons-material/CreateSharp';
+import CloseIcon from '@mui/icons-material/Close';
 
 // stole this from https://mui.com/components/switches/
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
@@ -80,6 +82,14 @@ function NavBar({
       alignItems="center"
     >
       <List>
+        <ListItem
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
+          <MaterialUISwitch onChange={darkSwitchToggle} checked={darkSwitch} />
+        </ListItem>
         <ListItem>
           <ListItemButton component={Link} to="/" onClick={toggleDrawer(false)}>
             <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
@@ -88,7 +98,7 @@ function NavBar({
                   fontSize: { xs: '12vw', lg: '1.75vw' },
                 }}
               />
-              <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> Home </Box>
+              <Box fontSize={{ xs: '12vw', lg: '1.75vw' }} textAlign="center"> Home </Box>
             </Stack>
           </ListItemButton>
         </ListItem>
@@ -128,19 +138,37 @@ function NavBar({
             </Stack>
           </ListItemButton>
         </ListItem>
-        <ListItem>
-          <MaterialUISwitch onChange={darkSwitchToggle} checked={darkSwitch} />
+        <ListItem
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
+          <IconButton
+            onClick={toggleDrawer(false)}
+            color="error"
+          >
+            <CloseIcon
+              sx={{
+                fontSize: { xs: '12vw' },
+                display: { xs: 'block', lg: 'none' },
+
+              }}
+            />
+          </IconButton>
         </ListItem>
       </List>
     </Box>
   );
 
   return (
-    <Box justifyContent="center">
-      {/* TODO: figure out how to move button to right side of screen */}
+    <AppBar
+      position="fixed"
+      sx={{ top: 'auto', bottom: 0 }}
+      color="primary"
+    >
       <IconButton
         onClick={toggleDrawer(true)}
-        color="primary"
       >
         <MenuIcon
           sx={{
@@ -159,16 +187,17 @@ function NavBar({
       >
         {list()}
       </Drawer>
+      {/* TODO: reverse sort list for mobile drawer */}
       <Drawer
         variant="temporary"
-        anchor="top"
+        anchor="bottom"
         open={drawerState}
         onClose={toggleDrawer(false)}
-        sx={{ display: { xs: 'block', lg: 'none' } }}
+        sx={{ display: { xs: 'block', lg: 'none' }, height: '100%' }}
       >
         {list()}
       </Drawer>
-    </Box>
+    </AppBar>
   );
 }
 

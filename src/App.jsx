@@ -33,13 +33,10 @@ const App = function app() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter>
-        <NavBar
-          darkSwitchToggle={darkSwitchToggle}
-          darkSwitch={darkSwitch}
-        />
         <Box
           marginLeft={{ xs: '10vw', lg: '22vw' }}
           marginRight={{ xs: '10vw', lg: '22vw' }}
+          paddingTop={{ xs: '10vw', lg: '5vw' }}
         >
           <Routes>
             <Route path="/about" element={<About />} />
@@ -48,6 +45,10 @@ const App = function app() {
             <Route path="/" element={<Home />} />
           </Routes>
         </Box>
+        <NavBar
+          darkSwitchToggle={darkSwitchToggle}
+          darkSwitch={darkSwitch}
+        />
       </BrowserRouter>
     </ThemeProvider>
   );
