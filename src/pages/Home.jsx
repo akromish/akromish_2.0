@@ -4,6 +4,7 @@ import {
 } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailSharpIcon from '@mui/icons-material/EmailSharp';
 
 export default function Home() {
   return (
@@ -22,6 +23,9 @@ export default function Home() {
         </Link>
         <Link href="https://github.com/akromish">
           <LinkedInIcon sx={{ fontSize: { xs: '12vw', lg: '2vw' } }} />
+        </Link>
+        <Link href="mailto: akram.weheba.11@gmail.com">
+          <EmailSharpIcon sx={{ fontSize: { xs: '12vw', lg: '2vw' } }} />
         </Link>
       </Stack>
     </Stack>
