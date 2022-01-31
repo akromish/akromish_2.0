@@ -36,7 +36,7 @@ const App = function app() {
         <Box
           marginLeft={{ xs: '10vw', lg: '22vw' }}
           marginRight={{ xs: '10vw', lg: '22vw' }}
-          paddingTop={{ xs: '10vw', lg: '5vw' }}
+          paddingY={{ xs: '10vw', lg: '5vw' }}
         >
           <Routes>
             <Route path="/about" element={<About />} />

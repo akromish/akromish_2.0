@@ -1,7 +1,7 @@
 import {
   AppBar,
   Box,
-  Drawer, IconButton, List, ListItem, ListItemButton, Stack, Switch,
+  Drawer, IconButton, ListItem, ListItemButton, Stack, Switch,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import React from 'react';
@@ -81,7 +81,8 @@ function NavBar({
       justifyContent="center"
       alignItems="center"
     >
-      <List>
+      <Stack>
+        <Box paddingTop="3vw" />
         <ListItem
           sx={{
             display: 'flex',
@@ -90,54 +91,58 @@ function NavBar({
         >
           <MaterialUISwitch onChange={darkSwitchToggle} checked={darkSwitch} />
         </ListItem>
-        <ListItem>
-          <ListItemButton component={Link} to="/" onClick={toggleDrawer(false)}>
-            <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-              <HomeSharpIcon
-                sx={{
-                  fontSize: { xs: '12vw', lg: '1.75vw' },
-                }}
-              />
-              <Box fontSize={{ xs: '12vw', lg: '1.75vw' }} textAlign="center"> Home </Box>
-            </Stack>
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton component={Link} to="/about" onClick={toggleDrawer(false)}>
-            <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-              <InfoIconSharp
-                sx={{
-                  fontSize: { xs: '12vw', lg: '1.75vw' },
-                }}
-              />
-              <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> About </Box>
-            </Stack>
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton component={Link} to="/cs-projects" onClick={toggleDrawer(false)}>
-            <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-              <TerminalSharpIcon
-                sx={{
-                  fontSize: { xs: '12vw', lg: '1.75vw' },
-                }}
-              />
-              <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> CS Projects </Box>
-            </Stack>
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton component={Link} to="/ramblings-and-such" onClick={toggleDrawer(false)}>
-            <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-              <CreateSharpIcon
-                sx={{
-                  fontSize: { xs: '12vw', lg: '1.75vw' },
-                }}
-              />
-              <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> Ramblings and Such </Box>
-            </Stack>
-          </ListItemButton>
-        </ListItem>
+        <Stack
+          direction={{ xs: 'column-reverse', lg: 'column' }}
+        >
+          <ListItem>
+            <ListItemButton component={Link} to="/" onClick={toggleDrawer(false)}>
+              <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
+                <HomeSharpIcon
+                  sx={{
+                    fontSize: { xs: '12vw', lg: '1.75vw' },
+                  }}
+                />
+                <Box fontSize={{ xs: '12vw', lg: '1.75vw' }} textAlign="center"> Home </Box>
+              </Stack>
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <ListItemButton component={Link} to="/about" onClick={toggleDrawer(false)}>
+              <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
+                <InfoIconSharp
+                  sx={{
+                    fontSize: { xs: '12vw', lg: '1.75vw' },
+                  }}
+                />
+                <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> About </Box>
+              </Stack>
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <ListItemButton component={Link} to="/cs-projects" onClick={toggleDrawer(false)}>
+              <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
+                <TerminalSharpIcon
+                  sx={{
+                    fontSize: { xs: '12vw', lg: '1.75vw' },
+                  }}
+                />
+                <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> CS Projects </Box>
+              </Stack>
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <ListItemButton component={Link} to="/ramblings-and-such" onClick={toggleDrawer(false)}>
+              <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
+                <CreateSharpIcon
+                  sx={{
+                    fontSize: { xs: '12vw', lg: '1.75vw' },
+                  }}
+                />
+                <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> Ramblings and Such </Box>
+              </Stack>
+            </ListItemButton>
+          </ListItem>
+        </Stack>
         <ListItem
           sx={{
             display: 'flex',
@@ -157,7 +162,7 @@ function NavBar({
             />
           </IconButton>
         </ListItem>
-      </List>
+      </Stack>
     </Box>
   );
 
