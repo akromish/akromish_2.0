@@ -18,13 +18,13 @@ export default function Home() {
       <Typography fontSize={{ xs: '5vw', lg: '1vw' }}>(software engineer??)</Typography>
       <Stack direction="row" spacing={2}>
         {/* TODO: make links open new tabs */}
-        <Link href="https://github.com/akromish">
+        <Link rel="noopener noreferrer" target="_blank" href="https://github.com/akromish">
           <GitHubIcon sx={{ fontSize: { xs: '12vw', lg: '2vw' } }} />
         </Link>
-        <Link href="https://github.com/akromish">
+        <Link rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/aweheba/">
           <LinkedInIcon sx={{ fontSize: { xs: '12vw', lg: '2vw' } }} />
         </Link>
-        <Link href="mailto: akram.weheba.11@gmail.com">
+        <Link rel="noopener noreferrer" target="_blank" href="mailto: akram.weheba.11@gmail.com">
           <EmailSharpIcon sx={{ fontSize: { xs: '12vw', lg: '2vw' } }} />
         </Link>
       </Stack>
