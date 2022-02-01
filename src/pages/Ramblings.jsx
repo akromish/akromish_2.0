@@ -10,7 +10,7 @@ export default function Ramblings() {
 
   return (
     <Box>
-      <Typography alignItems="center" justifyContent="center" display="flex" fontWeight="bold" fontSize={{ xs: '12vw', lg: '4vw' }}>Ramblings</Typography>
+      <Typography alignItems="center" justifyContent="center" display="flex" fontWeight="bold" variant="h2">Ramblings</Typography>
       <Stack spacing={2}>
         {rambleList.map((ramble) => (
           <ReadMoreCard jsonEntry={ramble} key={ramble.id} />

@@ -29,6 +29,13 @@ const App = function app() {
         'sans-serif',
       ].join(','),
     },
+    breakpoints: {
+      values: {
+        mobile: 0,
+        tablet: 640,
+        desktop: 1200,
+      },
+    },
   });
 
   return (
@@ -36,9 +43,9 @@ const App = function app() {
       <CssBaseline />
       <BrowserRouter>
         <Box
-          marginLeft={{ xs: '10vw', lg: '26vw' }}
-          marginRight={{ xs: '10vw', lg: '26vw' }}
-          paddingY={{ xs: '10vw', lg: '5vw' }}
+          marginLeft={{ mobile: '10vw', desktop: '26vw' }}
+          marginRight={{ mobile: '10vw', desktop: '26vw' }}
+          paddingY={{ mobile: '10vw', desktop: '5vw' }}
         >
           <Routes>
             <Route path="/about" element={<About />} />

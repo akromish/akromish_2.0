@@ -77,7 +77,7 @@ function NavBar({
   const list = () => (
     <Box
       role="presentation"
-      width={{ xs: '100vw', lg: '20vw' }}
+      width={{ mobile: '100vw', desktop: '20vw' }}
       justifyContent="center"
       alignItems="center"
     >
@@ -86,43 +86,43 @@ function NavBar({
         <ListItem sx={{ display: 'flex', justifyContent: 'center' }}>
           <MaterialUISwitch onChange={darkSwitchToggle} checked={darkSwitch} />
         </ListItem>
-        <Stack direction={{ xs: 'column-reverse', lg: 'column' }}>
+        <Stack direction={{ mobile: 'column-reverse', desktop: 'column' }}>
           <ListItem>
             <ListItemButton component={Link} to="/" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <RocketLaunchTwoToneIcon color="primary" sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
-                <Box fontSize={{ xs: '12vw', lg: '1.75vw' }} textAlign="center"> Home </Box>
+                <RocketLaunchTwoToneIcon color="primary" sx={{ fontSize: { mobile: '12vw', desktop: '1.75vw' } }} />
+                <Box fontSize={{ mobile: '12vw', desktop: '1.75vw' }} textAlign="center"> Home </Box>
               </Stack>
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton component={Link} to="/about" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <HelpCenterTwoToneIcon color="primary" sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
-                <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> About </Box>
+                <HelpCenterTwoToneIcon color="primary" sx={{ fontSize: { mobile: '12vw', desktop: '1.75vw' } }} />
+                <Box fontSize={{ mobile: '12vw', desktop: '1.75vw' }}> About </Box>
               </Stack>
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton component={Link} to="/cs-projects" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <TerminalTwoToneIcon color="primary" sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
-                <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}>Projects </Box>
+                <TerminalTwoToneIcon color="primary" sx={{ fontSize: { mobile: '12vw', desktop: '1.75vw' } }} />
+                <Box fontSize={{ mobile: '12vw', desktop: '1.75vw' }}>Projects </Box>
               </Stack>
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton component={Link} to="/ramblings" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <BookTwoToneIcon color="primary" sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
-                <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> Ramblings</Box>
+                <BookTwoToneIcon color="primary" sx={{ fontSize: { mobile: '12vw', desktop: '1.75vw' } }} />
+                <Box fontSize={{ mobile: '12vw', desktop: '1.75vw' }}> Ramblings</Box>
               </Stack>
             </ListItemButton>
           </ListItem>
         </Stack>
         <ListItem sx={{ display: 'flex', justifyContent: 'center' }}>
           <IconButton onClick={toggleDrawer(false)} color="error">
-            <CloseIcon sx={{ fontSize: { xs: '12vw' }, display: { xs: 'block', lg: 'none' } }} />
+            <CloseIcon sx={{ fontSize: { mobile: '12vw' }, display: { mobile: 'block', desktop: 'none' } }} />
           </IconButton>
         </ListItem>
       </Stack>
@@ -136,14 +136,14 @@ function NavBar({
       color="primary"
     >
       <IconButton onClick={toggleDrawer(true)}>
-        <MenuIcon sx={{ fontSize: { xs: '12vw' }, display: { xs: 'block', lg: 'none' } }} />
+        <MenuIcon sx={{ fontSize: { mobile: '12vw' }, display: { mobile: 'block', desktop: 'none' } }} />
       </IconButton>
       <Drawer
         variant="permanent"
         anchor="left"
         open={drawerState}
         onClose={toggleDrawer(false)}
-        sx={{ display: { xs: 'none', lg: 'block' } }}
+        sx={{ display: { mobile: 'none', desktop: 'block' } }}
       >
         {list()}
       </Drawer>
@@ -152,7 +152,7 @@ function NavBar({
         anchor="bottom"
         open={drawerState}
         onClose={toggleDrawer(false)}
-        sx={{ display: { xs: 'block', lg: 'none' }, height: '100%' }}
+        sx={{ display: { mobile: 'block', desktop: 'none' }, height: '100%' }}
       >
         {list()}
       </Drawer>

@@ -4,8 +4,8 @@ import { Box, Typography } from '@mui/material';
 export default function About() {
   return (
     <Box>
-      <Typography alignItems="center" justifyContent="center" display="flex" fontWeight="bold" fontSize={{ xs: '12vw', lg: '4vw' }}>About</Typography>
-      <Typography fontSize={{ xs: '5vw', lg: '1.25vw' }}>
+      <Typography alignItems="center" justifyContent="center" display="flex" fontWeight="bold" variant="h2">About</Typography>
+      <Typography fontSize={{ mobile: '5vw', desktop: '1.25vw' }}>
         👋 Hey there fellow human! I&apos;m Akram and I&apos;m a Software Engineer👨‍💻 at NetScout.
         Thanks for checking out my website.
         It&apos;s not a masterpiece but it&apos;s my piece.

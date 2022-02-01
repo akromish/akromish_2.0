@@ -10,7 +10,7 @@ export default function Projects() {
 
   return (
     <Box>
-      <Typography alignItems="center" justifyContent="center" display="flex" fontWeight="bold" fontSize={{ xs: '12vw', lg: '4vw' }}>Projects</Typography>
+      <Typography alignItems="center" justifyContent="center" display="flex" fontWeight="bold" variant="h2">Projects</Typography>
       <Stack spacing={2}>
         {projectList.map((project) => (
           <ReadMoreCard jsonEntry={project} key={project.id} project />
