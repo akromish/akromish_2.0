@@ -13,7 +13,7 @@ export default function Projects() {
       <Typography alignItems="center" justifyContent="center" display="flex" fontWeight="bold" fontSize={{ xs: '12vw', lg: '4vw' }}>Projects</Typography>
       <Stack spacing={2}>
         {projectList.map((project) => (
-          <ReadMoreCard jsonEntry={project} key={project.id} />
+          <ReadMoreCard jsonEntry={project} key={project.id} project />
         ))}
       </Stack>
     </Box>
