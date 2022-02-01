@@ -107,15 +107,15 @@ function NavBar({
             <ListItemButton component={Link} to="/cs-projects" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
                 <TerminalSharpIcon sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
-                <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> CS Projects </Box>
+                <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}>Projects </Box>
               </Stack>
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton component={Link} to="/ramblings-and-such" onClick={toggleDrawer(false)}>
+            <ListItemButton component={Link} to="/ramblings" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
                 <CreateSharpIcon sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
-                <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> Ramblings and Such </Box>
+                <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> Ramblings</Box>
               </Stack>
             </ListItemButton>
           </ListItem>

@@ -1,16 +1,18 @@
 import React from 'react';
 import {
-  Box, Link, Stack, Typography,
+  Link, Stack, Typography,
 } from '@mui/material';
 
-export default function CSProjects() {
+export default function Projects() {
   return (
     <Stack alignItems="center" spacing={4}>
-      <Box fontSize={{ xs: '12vw', lg: '4vw' }}>CS Projects</Box>
+      <Typography fontWeight="bold" fontSize={{ xs: '12vw', lg: '4vw' }}>Projects</Typography>
       <Stack spacing={2}>
         <Stack spacing={1}>
-          <Link href="https://github.com/akromish/pdg-auction" underline="hover" fontSize={{ xs: '8vw', lg: '2vw' }}>
-            PD Silent Auction
+          <Link href="https://github.com/akromish/pdg-auction" underline="hover">
+            <Typography fontSize={{ xs: '8vw', lg: '2vw' }}>
+              PD Silent Auction
+            </Typography>
           </Link>
           <Typography fontSize={{ xs: '5vw', lg: '1.25vw' }}>
             Whamo! That&apos;s a pretty catchy first word if you ask me. How does it relate to

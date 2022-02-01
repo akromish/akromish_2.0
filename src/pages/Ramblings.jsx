@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box, Stack, Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 
-export default function RamblingsAndSuch() {
+export default function Ramblings() {
   return (
     <Stack alignItems="center" spacing={4}>
-      <Box fontSize={{ xs: '12vw', lg: '4vw' }}>Ramblings and Such</Box>
+      <Typography fontWeight="bold" fontSize={{ xs: '12vw', lg: '4vw' }}>Ramblings</Typography>
       <Stack spacing={2}>
         <Stack spacing={1}>
           <Typography fontSize={{ xs: '8vw', lg: '2vw' }} color="primary">

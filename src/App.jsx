@@ -7,8 +7,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
-import RamblingsAndSuch from './pages/RamblingsAndSuch';
-import CSProjects from './pages/CSProjects';
+import Ramblings from './pages/Ramblings';
+import Projects from './pages/Projects';
 import About from './pages/About';
 
 const App = function app() {
@@ -24,7 +24,10 @@ const App = function app() {
       },
     },
     typography: {
-      // fontFamily: 'Ubuntu', // TODO: figure out how to do fonts lol
+      fontFamily: [
+        'Josefin Sans',
+        'sans-serif',
+      ].join(','),
     },
   });
 
@@ -39,8 +42,8 @@ const App = function app() {
         >
           <Routes>
             <Route path="/about" element={<About />} />
-            <Route path="/ramblings-and-such" element={<RamblingsAndSuch />} />
-            <Route path="/cs-projects" element={<CSProjects />} />
+            <Route path="/ramblings" element={<Ramblings />} />
+            <Route path="/cs-projects" element={<Projects />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </Box>

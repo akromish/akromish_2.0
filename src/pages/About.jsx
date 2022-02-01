@@ -4,7 +4,7 @@ import { Stack, Typography } from '@mui/material';
 export default function About() {
   return (
     <Stack alignItems="center">
-      <Typography fontSize={{ xs: '12vw', lg: '4vw' }}>About</Typography>
+      <Typography fontWeight="bold" fontSize={{ xs: '12vw', lg: '4vw' }}>About</Typography>
       <Typography fontSize={{ xs: '5vw', lg: '1.25vw' }}>
         👋 Hey there fellow human!
         <br />
