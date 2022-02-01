@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   Button,
@@ -8,42 +8,40 @@ import {
 function ReadMoreCard({
   jsonEntry,
 }) {
+  const [expanded, setExpanded] = useState(false);
+  const expandedToggle = () => {
+    setExpanded(!expanded);
+  };
+
   return (
-    <Card
-      elevation={0}
-      sx={{
-        borderColor: 'black',
-        borderStyle: 'solid',
-        borderWidth: '1px',
-        marginY: '2vw',
-      }}
-    >
+    <Card>
       <CardContent>
-        <Typography fontSize={{ xs: '8vw', lg: '2vw' }} color="primary">
+        <Typography variant="h4" color="primary">
           {jsonEntry.title}
         </Typography>
-        <Typography fontSize={{ xs: '5vw', lg: '1.25vw' }}>
+        <Typography variant="h6">
           {jsonEntry.preview}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <Button
-          variant="text"
-          size="large"
-          sx={{
-            textTransform: 'none', marginLeft: 'auto',
-          }}
-        >
-          read more
-        </Button>
-      </CardActions>
-      <Collapse>
+      <Collapse in={expanded}>
         <CardContent>
-          <Typography>
+          <Typography variant="h6">
             {jsonEntry.body}
           </Typography>
         </CardContent>
       </Collapse>
+      <CardActions disableSpacing>
+        <Button
+          variant="text"
+          size="medium"
+          sx={{
+            textTransform: 'none', marginLeft: 'auto', marginRight: '1vw',
+          }}
+          onClick={expandedToggle}
+        >
+          <Typography variant="h5">{expanded ? 'collapse' : 'read more'}</Typography>
+        </Button>
+      </CardActions>
     </Card>
   );
 }

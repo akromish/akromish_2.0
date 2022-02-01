@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Box, Typography,
+  Box, Stack, Typography,
 } from '@mui/material';
 import ReadMoreCard from '../components/ReadMoreCard';
 
@@ -11,9 +11,11 @@ export default function Projects() {
   return (
     <Box>
       <Typography alignItems="center" justifyContent="center" display="flex" fontWeight="bold" fontSize={{ xs: '12vw', lg: '4vw' }}>Projects</Typography>
-      {projectList.map((project) => (
-        <ReadMoreCard jsonEntry={project} key={project.id} />
-      ))}
+      <Stack spacing={2}>
+        {projectList.map((project) => (
+          <ReadMoreCard jsonEntry={project} key={project.id} />
+        ))}
+      </Stack>
     </Box>
   );
 }
