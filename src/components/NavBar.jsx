@@ -8,13 +8,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
-import HomeSharpIcon from '@mui/icons-material/HomeSharp';
-import InfoIconSharp from '@mui/icons-material/InfoSharp';
-import TerminalSharpIcon from '@mui/icons-material/TerminalSharp';
-import CreateSharpIcon from '@mui/icons-material/CreateSharp';
+import RocketLaunchTwoToneIcon from '@mui/icons-material/RocketLaunchTwoTone';
+import HelpCenterTwoToneIcon from '@mui/icons-material/HelpCenterTwoTone';
+import TerminalTwoToneIcon from '@mui/icons-material/TerminalTwoTone';
+import BookTwoToneIcon from '@mui/icons-material/BookTwoTone';
 import CloseIcon from '@mui/icons-material/Close';
 
-// stole this from https://mui.com/components/switches/
+// stole MaterialUISwitch from https://mui.com/components/switches/
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
@@ -90,7 +90,7 @@ function NavBar({
           <ListItem>
             <ListItemButton component={Link} to="/" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <HomeSharpIcon sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
+                <RocketLaunchTwoToneIcon color="primary" sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
                 <Box fontSize={{ xs: '12vw', lg: '1.75vw' }} textAlign="center"> Home </Box>
               </Stack>
             </ListItemButton>
@@ -98,7 +98,7 @@ function NavBar({
           <ListItem>
             <ListItemButton component={Link} to="/about" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <InfoIconSharp sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
+                <HelpCenterTwoToneIcon color="primary" sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
                 <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> About </Box>
               </Stack>
             </ListItemButton>
@@ -106,7 +106,7 @@ function NavBar({
           <ListItem>
             <ListItemButton component={Link} to="/cs-projects" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <TerminalSharpIcon sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
+                <TerminalTwoToneIcon color="primary" sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
                 <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}>Projects </Box>
               </Stack>
             </ListItemButton>
@@ -114,7 +114,7 @@ function NavBar({
           <ListItem>
             <ListItemButton component={Link} to="/ramblings" onClick={toggleDrawer(false)}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <CreateSharpIcon sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
+                <BookTwoToneIcon color="primary" sx={{ fontSize: { xs: '12vw', lg: '1.75vw' } }} />
                 <Box fontSize={{ xs: '12vw', lg: '1.75vw' }}> Ramblings</Box>
               </Stack>
             </ListItemButton>
