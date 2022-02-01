@@ -5,7 +5,10 @@ export default function About() {
   return (
     <Box>
       <Typography alignItems="center" justifyContent="center" display="flex" fontWeight="bold" variant="h2">About</Typography>
-      <Typography fontSize={{ mobile: '5vw', desktop: '1.25vw' }}>
+      <Typography
+        variant="h5"
+        paddingTop={{ mobile: '8vw', tablet: '5vw', desktop: '3vw' }}
+      >
         👋 Hey there fellow human! I&apos;m Akram and I&apos;m a Software Engineer👨‍💻 at NetScout.
         Thanks for checking out my website.
         It&apos;s not a masterpiece but it&apos;s my piece.

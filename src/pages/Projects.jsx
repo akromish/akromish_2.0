@@ -11,7 +11,7 @@ export default function Projects() {
   return (
     <Box>
       <Typography alignItems="center" justifyContent="center" display="flex" fontWeight="bold" variant="h2">Projects</Typography>
-      <Stack spacing={2}>
+      <Stack spacing={2} paddingTop={{ mobile: '8vw', tablet: '5vw', desktop: '3vw' }}>
         {projectList.map((project) => (
           <ReadMoreCard jsonEntry={project} key={project.id} project />
         ))}

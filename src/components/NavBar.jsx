@@ -1,7 +1,7 @@
 import {
   AppBar,
   Box,
-  Drawer, IconButton, ListItem, ListItemButton, Stack, Switch,
+  Drawer, IconButton, ListItem, ListItemButton, Stack, Switch, Typography,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import React from 'react';
@@ -74,10 +74,11 @@ function NavBar({
     setDrawerState(open);
   };
 
+  // TODO: fix navbar centering at least on tab and desk
   const list = () => (
     <Box
       role="presentation"
-      width={{ mobile: '100vw', desktop: '20vw' }}
+      width={{ mobile: '100vw', tablet: '100vw', desktop: '23vw' }}
       justifyContent="center"
       alignItems="center"
     >
@@ -86,43 +87,43 @@ function NavBar({
         <ListItem sx={{ display: 'flex', justifyContent: 'center' }}>
           <MaterialUISwitch onChange={darkSwitchToggle} checked={darkSwitch} />
         </ListItem>
-        <Stack direction={{ mobile: 'column-reverse', desktop: 'column' }}>
+        <Stack direction={{ mobile: 'column-reverse', tablet: 'column', desktop: 'column' }}>
           <ListItem>
-            <ListItemButton component={Link} to="/" onClick={toggleDrawer(false)}>
-              <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <RocketLaunchTwoToneIcon color="primary" sx={{ fontSize: { mobile: '12vw', desktop: '1.75vw' } }} />
-                <Box fontSize={{ mobile: '12vw', desktop: '1.75vw' }} textAlign="center"> Home </Box>
+            <ListItemButton component={Link} to="/" onClick={toggleDrawer(false)} sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Stack direction="row" spacing={2} alignItems="center">
+                <RocketLaunchTwoToneIcon color="primary" fontSize="large" />
+                <Typography variant="h3" textAlign="center"> Home </Typography>
               </Stack>
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton component={Link} to="/about" onClick={toggleDrawer(false)}>
+            <ListItemButton component={Link} to="/about" onClick={toggleDrawer(false)} sx={{ display: 'flex', justifyContent: 'center' }}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <HelpCenterTwoToneIcon color="primary" sx={{ fontSize: { mobile: '12vw', desktop: '1.75vw' } }} />
-                <Box fontSize={{ mobile: '12vw', desktop: '1.75vw' }}> About </Box>
+                <HelpCenterTwoToneIcon color="primary" fontSize="large" />
+                <Typography variant="h3" textAlign="center"> About </Typography>
               </Stack>
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton component={Link} to="/cs-projects" onClick={toggleDrawer(false)}>
+            <ListItemButton component={Link} to="/projects" onClick={toggleDrawer(false)} sx={{ display: 'flex', justifyContent: 'center' }}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <TerminalTwoToneIcon color="primary" sx={{ fontSize: { mobile: '12vw', desktop: '1.75vw' } }} />
-                <Box fontSize={{ mobile: '12vw', desktop: '1.75vw' }}>Projects </Box>
+                <TerminalTwoToneIcon color="primary" fontSize="large" />
+                <Typography variant="h3" textAlign="center"> Projects </Typography>
               </Stack>
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton component={Link} to="/ramblings" onClick={toggleDrawer(false)}>
+            <ListItemButton component={Link} to="/rambles" onClick={toggleDrawer(false)} sx={{ display: 'flex', justifyContent: 'center' }}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <BookTwoToneIcon color="primary" sx={{ fontSize: { mobile: '12vw', desktop: '1.75vw' } }} />
-                <Box fontSize={{ mobile: '12vw', desktop: '1.75vw' }}> Ramblings</Box>
+                <BookTwoToneIcon color="primary" fontSize="large" />
+                <Typography variant="h3" textAlign="center"> Rambles </Typography>
               </Stack>
             </ListItemButton>
           </ListItem>
         </Stack>
         <ListItem sx={{ display: 'flex', justifyContent: 'center' }}>
           <IconButton onClick={toggleDrawer(false)} color="error">
-            <CloseIcon sx={{ fontSize: { mobile: '12vw' }, display: { mobile: 'block', desktop: 'none' } }} />
+            <CloseIcon fontSize="large" sx={{ display: { mobile: 'block', tablet: 'none', desktop: 'none' } }} />
           </IconButton>
         </ListItem>
       </Stack>
@@ -136,14 +137,15 @@ function NavBar({
       color="primary"
     >
       <IconButton onClick={toggleDrawer(true)}>
-        <MenuIcon sx={{ fontSize: { mobile: '12vw' }, display: { mobile: 'block', desktop: 'none' } }} />
+        <MenuIcon fontSize="large" sx={{ display: { mobile: 'block', tablet: 'block', desktop: 'none' } }} />
       </IconButton>
+      {/* TODO: figure out how to consolidate drawers via breakpoint */}
       <Drawer
         variant="permanent"
         anchor="left"
         open={drawerState}
         onClose={toggleDrawer(false)}
-        sx={{ display: { mobile: 'none', desktop: 'block' } }}
+        sx={{ display: { mobile: 'none', tablet: 'none', desktop: 'block' } }}
       >
         {list()}
       </Drawer>
@@ -152,7 +154,7 @@ function NavBar({
         anchor="bottom"
         open={drawerState}
         onClose={toggleDrawer(false)}
-        sx={{ display: { mobile: 'block', desktop: 'none' }, height: '100%' }}
+        sx={{ display: { mobile: 'block', tablet: 'block', desktop: 'none' }, height: '100%' }}
       >
         {list()}
       </Drawer>

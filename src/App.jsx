@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
-import Ramblings from './pages/Ramblings';
+import Rambles from './pages/Rambles';
 import Projects from './pages/Projects';
 import About from './pages/About';
 
@@ -33,7 +33,7 @@ const App = function app() {
       values: {
         mobile: 0,
         tablet: 640,
-        desktop: 1200,
+        desktop: 1100,
       },
     },
   });
@@ -43,14 +43,15 @@ const App = function app() {
       <CssBaseline />
       <BrowserRouter>
         <Box
-          marginLeft={{ mobile: '10vw', desktop: '26vw' }}
-          marginRight={{ mobile: '10vw', desktop: '26vw' }}
-          paddingY={{ mobile: '10vw', desktop: '5vw' }}
+          marginLeft={{ mobile: '10vw', tablet: '15vw', desktop: '26vw' }}
+          marginRight={{ mobile: '10vw', tablet: '15vw', desktop: '26vw' }}
+          paddingTop={{ mobile: '10vw', tablet: '5vw', desktop: '5vw' }}
+          paddingBottom={{ mobile: '22vw', tablet: '15vw', desktop: '9vw' }}
         >
           <Routes>
             <Route path="/about" element={<About />} />
-            <Route path="/ramblings" element={<Ramblings />} />
-            <Route path="/cs-projects" element={<Projects />} />
+            <Route path="/rambles" element={<Rambles />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </Box>
