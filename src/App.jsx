@@ -36,8 +36,8 @@ const App = function app() {
       <CssBaseline />
       <BrowserRouter>
         <Box
-          marginLeft={{ xs: '10vw', lg: '22vw' }}
-          marginRight={{ xs: '10vw', lg: '22vw' }}
+          marginLeft={{ xs: '10vw', lg: '26vw' }}
+          marginRight={{ xs: '10vw', lg: '26vw' }}
           paddingY={{ xs: '10vw', lg: '5vw' }}
         >
           <Routes>

@@ -8,7 +8,7 @@ import ExpandMoreTwoToneIcon from '@mui/icons-material/ExpandMoreTwoTone';
 export default function Ramblings() {
   return (
     <Box>
-      <Typography fontWeight="bold" fontSize={{ xs: '12vw', lg: '4vw' }}>Ramblings</Typography>
+      <Typography alignItems="center" justifyContent="center" display="flex" fontWeight="bold" fontSize={{ xs: '12vw', lg: '4vw' }}>Ramblings</Typography>
       <Card sx={{ borderRadius: 2 }}>
         <CardContent>
           <Typography fontSize={{ xs: '8vw', lg: '2vw' }} color="primary">
