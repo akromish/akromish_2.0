@@ -6,12 +6,6 @@ import ExpandMoreTwoToneIcon from '@mui/icons-material/ExpandMoreTwoTone';
 
 // TODO(one day lol): store these entries in db instead of static here
 export default function Ramblings() {
-  const [expandedId, setExpandedId] = React.useState(-1);
-
-  const handleExpandClick = (i) => {
-    setExpandedId(expandedId === i ? -1 : i);
-  };
-
   return (
     <Box>
       <Typography fontWeight="bold" fontSize={{ xs: '12vw', lg: '4vw' }}>Ramblings</Typography>
