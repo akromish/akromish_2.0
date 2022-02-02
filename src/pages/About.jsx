@@ -17,7 +17,7 @@ export default function About() {
         On the CS side of things, recently, I&apos;ve been doing a lot of Kubernetes⎈(my aliases
         can vouch for me lol),
         AWS☁️, and Grafana📈 stuff.
-        I enjoy both front-end(like this website lol) as well as backend-end(recently
+        I enjoy both front-end(like this website lol) as well as back-end(recently
         java microservices).
         Along with Software Development, I&apos;ve come to really enjoy the fields of
         Site Reliability Engineering and general microservice architecture.
