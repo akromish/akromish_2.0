@@ -123,7 +123,7 @@ function NavBar({
         </Stack>
         <ListItem sx={{ display: 'flex', justifyContent: 'center' }}>
           <IconButton onClick={toggleDrawer(false)} color="error">
-            <CloseIcon fontSize="large" sx={{ display: { mobile: 'block', tablet: 'none', desktop: 'none' } }} />
+            <CloseIcon fontSize="large" sx={{ display: { mobile: 'block', tablet: 'block', desktop: 'none' } }} />
           </IconButton>
         </ListItem>
       </Stack>
