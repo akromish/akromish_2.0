@@ -9,7 +9,7 @@ export default function About() {
         variant="h5"
         paddingTop={{ mobile: '8vw', tablet: '5vw', desktop: '3vw' }}
       >
-        👋 Hey there fellow human! I&apos;m Akram and I&apos;m a Software Engineer👨‍💻 at NetScout.
+        👋 Hey there fellow human! I&apos;m Akram and I&apos;m a Software Engineer👨‍💻 at Zillow.
         Thanks for checking out my website.
         It&apos;s not a masterpiece but it&apos;s my piece.
         <br />
