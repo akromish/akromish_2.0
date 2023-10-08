@@ -19,7 +19,7 @@ export default function Home() {
       </Typography>
       <Avatar
         alt="akram"
-        src="/akram-main.jpg"
+        src="/akram-main.jpeg"
         sx={{
           width: { mobile: '60vw', tablet: '30vw', desktop: '18vw' },
           height: { mobile: '60vw', tablet: '30vw', desktop: '18vw' },
