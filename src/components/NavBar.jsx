@@ -97,6 +97,14 @@ function NavBar({
             </ListItemButton>
           </ListItem>
           <ListItem>
+            <ListItemButton component={Link} to="/rambles" onClick={toggleDrawer(false)} sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
+                <BookTwoToneIcon color="primary" fontSize="large" />
+                <Typography variant="h3" textAlign="center"> Rambles </Typography>
+              </Stack>
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
             <ListItemButton component={Link} to="/about" onClick={toggleDrawer(false)} sx={{ display: 'flex', justifyContent: 'center' }}>
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
                 <HelpCenterTwoToneIcon color="primary" fontSize="large" />
@@ -109,14 +117,6 @@ function NavBar({
               <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
                 <TerminalTwoToneIcon color="primary" fontSize="large" />
                 <Typography variant="h3" textAlign="center"> Projects </Typography>
-              </Stack>
-            </ListItemButton>
-          </ListItem>
-          <ListItem>
-            <ListItemButton component={Link} to="/rambles" onClick={toggleDrawer(false)} sx={{ display: 'flex', justifyContent: 'center' }}>
-              <Stack direction="row" spacing={2} alignItems="center" fontSize="1.75vw">
-                <BookTwoToneIcon color="primary" fontSize="large" />
-                <Typography variant="h3" textAlign="center"> Rambles </Typography>
               </Stack>
             </ListItemButton>
           </ListItem>

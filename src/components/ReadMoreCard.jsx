@@ -20,17 +20,17 @@ function ReadMoreCard({
 
   return (
     <Card>
-      <CardContent>
-        <Typography variant="h4" color="primary">
+      <CardContent style={{ paddingBottom: '0', marginLeft: '1vw', marginRight: '1vw' }}>
+        <Typography variant="h4" color="primary" style={{ marginBottom: '2vw' }}>
           {project ? projectUrl() : jsonEntry.title}
         </Typography>
-        <Typography variant="h6">
+        <Typography variant="h6" style={{ whiteSpace: 'pre-wrap' }}>
           {jsonEntry.preview}
         </Typography>
       </CardContent>
       <Collapse in={expanded}>
-        <CardContent>
-          <Typography variant="h6">
+        <CardContent style={{ marginLeft: '1vw', marginRight: '1vw' }}>
+          <Typography variant="h6" style={{ whiteSpace: 'pre-wrap' }} component={jsonEntry.title === 'Stream of thought 1.0' ? 'i' : 'span'}>
             {jsonEntry.body}
           </Typography>
         </CardContent>
